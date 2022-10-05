@@ -1,2 +1,6 @@
-# react_study
-리액트 공부하면서 작성했던 코드들
+# 공식사이트 예제
+공식사이트(ko.reactjs.org)를 공부한 예제를 올려놓았습니다.
+
+[first]  
+제목 : 웹사이트에 React 추가  
+교육URL : https://ko.reactjs.org/docs/add-react-to-a-website.html#optional-try-react-with-jsx  
