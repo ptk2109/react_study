@@ -1,2 +1,2 @@
-# react_study
-리액트 공부하면서 작성했던 코드들
+# 공식사이트 예제
+사이트 : ko.reactjs.org
