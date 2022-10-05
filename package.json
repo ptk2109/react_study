@@ -1,0 +1,24 @@
+{
+  "name": "react_study",
+  "version": "1.0.0",
+  "description": "리액트 공부하면서 작성했던 코드들",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptk2109/react_study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ptk2109/react_study/issues"
+  },
+  "homepage": "https://github.com/ptk2109/react_study#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
+}
