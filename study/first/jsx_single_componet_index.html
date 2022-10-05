@@ -1,0 +1,33 @@
+<!--
+제목 : 1분 내로 React 추가하기 
+교육URL : https://ko.reactjs.org/docs/add-react-to-a-website.html#optional-try-react-with-jsx
+
+호출 URL : http://127.0.0.80/study/first/single_componets_index.html
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>1분 안에 반응추가</title>
+  </head>
+  <body>
+
+    <h2>1분 안에 반응추가</h2>
+    <p>이 페이지는 빌드 도구 없이 React를 사용하는 방법을 보여줍니다.</p>
+    <p>React는 스크립트 태그로 로드됩니다.</p>
+
+    <!-- We will put our React component inside this div. -->
+    <div id="like_button_container"></div>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Load React. -->
+    <!-- Note: 배포할 때 "development.js"를 "production.min.js"로 바꿉니다.". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- React 구성 요소 로드 -->
+    <script src="single_componet_like_button.js"></script>
+
+  </body>
+</html>
