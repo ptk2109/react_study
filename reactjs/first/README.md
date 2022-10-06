@@ -41,7 +41,7 @@
 머리 속 및 문서로 잘 정리하고 빨리 다음장 가봐야겠다. 
 <br /><br />
 
-[^1]: `npm init` 은 node 프로그램을 시작(initialize)하는 명령이고 / `-y` 는 `package.json` 파일을 자동 생성시켜준다.  
+[^1]: `npm init` 은 node 프로그램을 시작(initialize)하는 명령이고 / `-y` 는 `package.json` 파일을 자동 생성시켜준다. <br />
 실행하니 package.json파일만 생성되었다.  
 <br />
 
