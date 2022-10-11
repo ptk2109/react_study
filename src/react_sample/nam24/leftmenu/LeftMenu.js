@@ -8,9 +8,10 @@ function LeftMenu(props) {
         <div className="leftmenu_wrap">
             <div className="title">[HTML 컴포넌트]</div>
             <ul>
-                <li><Link to="/nam24/html_component/Sample_RadioButton">Radio Button</Link></li>
-                <li><Link to="/nam24/html_component/Sample_CheckBox">Check Box</Link></li>
-                <li><Link to="/nam24/html_component/Sample_InputBox">Input Box</Link></li>
+                <li><Link to="/nam24/html_component/Sample_Button">Button</Link></li>
+                <li><Link to="/nam24/html_component/Sample_RadioButton">Radio</Link></li>
+                <li><Link to="/nam24/html_component/Sample_CheckBox">CheckBox</Link></li>
+                <li><Link to="/nam24/html_component/Sample_InputBox">InputBox</Link></li>
             </ul>
             
         </div>

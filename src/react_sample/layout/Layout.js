@@ -5,7 +5,11 @@ import NotFound from './NotFound';
 
 import "./css/layout_common.css";
 
+/* 공식사이트 예제 */
 import Tiktactoe_main from '../reactjs/tiktactoe/Tiktactoe_main';
+
+/* html 컴포넌트 제어 */
+import Sample_Button from '../nam24/html_component/Sample_Button';
 import Sample_RadioButton from '../nam24/html_component/Sample_RadioButton';
 import Sample_CheckBox from '../nam24/html_component/Sample_CheckBox';
 import Sample_InputBox from '../nam24/html_component/Sample_InputBox';
@@ -23,6 +27,7 @@ const SampleLayout = () => {
 						<Route path="/reactjs/tiktactoe/Tiktactoe_main" element={<Tiktactoe_main />}></Route>
 
 						{/* html 컴포넌트 제어 */}
+						<Route path="/nam24/html_component/Sample_Button" element={<Sample_Button />}></Route>
 						<Route path="/nam24/html_component/Sample_RadioButton" element={<Sample_RadioButton />}></Route>
 						<Route path="/nam24/html_component/Sample_CheckBox" element={<Sample_CheckBox />}></Route>
 						<Route path="/nam24/html_component/Sample_InputBox" element={<Sample_InputBox />}></Route>
