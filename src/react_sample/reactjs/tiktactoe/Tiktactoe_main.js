@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './Tiktactoe_main.css';
+import LeftMenu from "../leftmenu/LeftMenu"
 
 class Square extends React.Component {
   render() {
@@ -46,20 +47,31 @@ class Board extends React.Component {
 class Game extends React.Component {
   render() {
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board />
+      <>
+        <LeftMenu />
+
+        <div className="content_wrap">
+          <div className="game">
+            <div className="game-board">
+              <Board />
+            </div>
+            <div className="game-info">
+              <div>{/* status */}</div>
+              <ol>{/* TODO */}</ol>
+            </div>
+          </div>
         </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
+      </>
+
+        
+     
     );
   }
 }
 
 // ========================================
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Game />);
+export default Game;
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Game />);
