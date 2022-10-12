@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './Tiktactoe_main.css';
 import LeftMenu from "../leftmenu/LeftMenu"
 

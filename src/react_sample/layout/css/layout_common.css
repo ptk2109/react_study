@@ -59,19 +59,25 @@ html, body {
 }
 
 .main_wrap .leftmenu_wrap{
-	width:200px;
+	width:250px;
 	background-color: #444;
 	color: #fff;
-	padding: 50px;
+	padding: 50px 20px;
 	
 	
 }
 
-
-.main_wrap .leftmenu_wrap ul li{
+.main_wrap .leftmenu_wrap ul{
+	margin: 0;
+	padding: 0;
+}
+.main_wrap .leftmenu_wrap li{
 	display: block;
 	margin: 20px 0;
+
 }
+
+
 
 .main_wrap .title{
 	display: block;
@@ -79,6 +85,24 @@ html, body {
 }
 
 .main_wrap .content_wrap{
-	padding : 50px
+	padding : 50px;
+	line-height: 24px;
+	letter-spacing : -1px;
 }
 
+.content_wrap .section{
+	margin-bottom: 20px;
+	border-top: dashed 1px #ccc;
+	padding-top: 20px;
+}
+.content_wrap .section .sub_title{
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0 0 10px 0;	
+}
+
+.content_wrap .section .discription{
+	font-size: 16px;
+	line-height: 28px;
+	margin: 10px 0;	
+}
