@@ -19,7 +19,7 @@ function SimpleInputState(){
 
     return (
         <div className="section">
-            <div className="sub_title">input 상태관리(useState 사용)</div>
+            <div className="sub_title">8. input 상태 관리하기(useState 사용)</div>
             <div className="discription">
                 1. 텍스트박스에 입력한 값은 값: 에 그대로 타이핑된다. <br />
                 2. 초기화를 클릭하면 입력값, 값: 에 작성된 데이터가 사라진다.
@@ -42,6 +42,7 @@ function SimpleInputState(){
     });
     
     const nameInput = useRef();
+    const hobbyInput = useRef();
     const {name, hobby} = inputs;           // 비구조화 할당을 통한 값 추출
 
     function onChange(e){                   // name, hobby에 같은 이벤트를 호출하기 때문에 e는 문자입력한 input 객체를 가르킨다.
@@ -61,12 +62,22 @@ function SimpleInputState(){
         nameInput.current.focus();
     }
 
+    function onFocus(){
+        // hobbyInput.current.value = "abc";        // 이렇게하면 취미: 에는 글이 작성안된다.(변수 연동 안된다)
+        setInputs({hobby: "취미에 자동 글 작성"});
+        hobbyInput.current.focus();
+    }
+
     return (
         <div className="section">
-            <div className="sub_title">여거래 input 상태관리 (useRef 사용)</div>
+            <div className="sub_title">
+                9. 여러개의 input 상태 관리하기 (useRef 사용) <br />
+                10. useRef 로 특정 DOM 선택하기
+            </div>
             <div className="discription">
                 1. 텍스트박스에 입력한 값은 값: 에 그대로 타이핑된다. <br />
                 2. 초기화를 클릭하면 입력값, 값: 에 작성된 데이터가 사라진다.
+                3. useRef로 특정 DOM 제어하기 
             </div>
             
             <input
@@ -81,8 +92,10 @@ function SimpleInputState(){
                 placeholder='취미'
                 onChange={onChange}
                 value={hobby}
+                ref={hobbyInput}
             />
-            <button onClick={onReset}>초기화</button><br />
+            <button onClick={onReset}>초기화</button>
+            <button onClick={onFocus}>취미포커스 & 글쓰기</button><br />
             <b>이름 : {name}</b><br />
             <b>취미 : {hobby}</b>
         </div>
