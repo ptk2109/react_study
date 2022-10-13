@@ -8,7 +8,7 @@ function LeftMenu(props) {
         <div className="leftmenu_wrap">
             <div className="title"><a href="https://ko.reactjs.org" rel="noreferrer">[reactjs]</a></div>
             <ul>
-                <li><Link to="/reactjs/tiktactoe/Tiktactoe_main">틱택톡</Link></li>
+                <li><Link to="/reactjs/tiktactoe/TiktactoeMain">틱택톡</Link></li>
             </ul>
             
         </div>

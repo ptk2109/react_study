@@ -1,5 +1,5 @@
 import React from 'react';
-import './Tiktactoe_main.css';
+import './TiktactoeMain.css';
 import LeftMenu from "../leftmenu/LeftMenu"
 
 class Square extends React.Component {

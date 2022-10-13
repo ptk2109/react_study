@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import LeftMenu from "../leftmenu/LeftMenu"
 
 
@@ -22,7 +22,7 @@ function BaseButton(){
 
 
 
-function Sample_Button(props) {
+function SampleButton(props) {
    
     return (
         <>
@@ -36,4 +36,4 @@ function Sample_Button(props) {
     );
 }
 
-export default Sample_Button;
+export default SampleButton;

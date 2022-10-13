@@ -90,7 +90,7 @@ function SimpleInputState(){
 }
 
 
-function Sample_Button(props) {
+function SampleButton(props) {
    
     return (
         <>
@@ -106,4 +106,4 @@ function Sample_Button(props) {
     );
 }
 
-export default Sample_Button;
+export default SampleButton;
