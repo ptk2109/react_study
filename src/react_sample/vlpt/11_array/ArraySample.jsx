@@ -1,9 +1,11 @@
-import React from 'react';
-import LeftMenu from "../leftmenu/LeftMenu"
+import React, {useState, useRef} from 'react';
+import LeftMenu from "../leftmenu/LeftMenu";
+
+import UserList from "./crud/UserList";
+import CreateUser from "./crud/CreateUser";
 
 
-
-function Part_11_1_users({user}){
+function User({user}){
     return (
         <div>
             <b>{user.username}</b> <span>({user.email})</span>
@@ -12,9 +14,9 @@ function Part_11_1_users({user}){
 }
 
 /**
- * 배열값을 출력하기
+ * 11. 배열 렌더링하기
  */
-function Part_11_1(){
+function Chapter11(){
     const users = [
         {
           id: 1,
@@ -59,9 +61,9 @@ function Part_11_1(){
             <div className="discription">
             - 배열값 출력하기(컴포넌트 재사용 하기)
             </div>
-            <Part_11_1_users user={users[0]} />
-            <Part_11_1_users user={users[1]} />
-            <Part_11_1_users user={users[2]} />
+            <User user={users[0]} />
+            <User user={users[1]} />
+            <User user={users[2]} />
 
 
             <div className="discription">
@@ -71,7 +73,7 @@ function Part_11_1(){
 
             <div>
                 {users.map((user, index) => (
-                    <Part_11_1_users user={user} key={index} />
+                    <User user={user} key={index} />
                 ))}
             </div>
 
@@ -81,45 +83,95 @@ function Part_11_1(){
 
 
 
-// function Part_11_2(){
-//     const users = [
-//         {
-//           id: 1,
-//           username: 'velopert',
-//           email: 'public.velopert@gmail.com'
-//         },
-//         {
-//           id: 2,
-//           username: 'tester',
-//           email: 'tester@example.com'
-//         },
-//         {
-//           id: 3,
-//           username: 'liz',
-//           email: 'liz@example.com'
-//         }
-//     ];
+/** ↓↓↓↓↓↓↓↓↓↓↓↓ 배열항목 CRUD ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
 
-//     return (
-//         <div className="section">
-//             <div className="sub_title">11. 배열 렌더링하기</div>
-//             <hr />
 
-//             <div className="sub_title">* 배열값을 출력하기(기본)</div>
-//             <div className="discription">
-//             </div>
-//             <div>
-//                 <b>{users[0].username}</b> <span>({users[0].email})</span>
-//             </div>
-//             <div>
-//                 <b>{users[1].username}</b> <span>({users[1].email})</span>
-//             </div>
-//             <div>
-//                 <b>{users[2].username}</b> <span>({users[1].email})</span>
-//             </div>
-//         </div>
-//     );
-// }
+function Chapter12(){
+    const [inputs, setInputs] = useState({
+        username: '',
+        email: ''
+    });
+    const { username, email } = inputs;
+    const onChange = e => {
+    const { name, value } = e.target;
+    setInputs({
+        ...inputs,
+        [name]: value
+    });
+    };
+    const [users, setUsers] = useState([
+        {
+          id: 1,
+          username: 'velopert',
+          email: 'public.velopert@gmail.com',
+          active: true
+        },
+        {
+          id: 2,
+          username: 'tester',
+          email: 'tester@example.com',
+          active: false
+        },
+        {
+          id: 3,
+          username: 'liz',
+          email: 'liz@example.com',
+          active: false
+        }
+    ]);
+
+    const nextId = useRef(4);
+
+
+    const onCreate = () => {
+        const user = {
+            id: nextId.current,
+            username,
+            email
+        };
+        setUsers(users.concat(user));
+
+        setInputs({
+            username: '',
+            email: ''
+        });
+        nextId.current += 1;
+    };
+
+
+    const onRemove = id => {
+        // user.id 가 파라미터로 일치하지 않는 원소만 추출해서 새로운 배열을 만듬
+        // = user.id 가 id 인 것을 제거함
+        setUsers(users.filter(user => user.id !== id));
+    };
+
+    const onToggle = id => {
+        setUsers(
+          users.map(user =>
+            user.id === id ? { ...user, active: !user.active } : user
+          )
+        );
+      };
+      
+    return (
+        <div className="section">
+            <div className="sub_title">12. CRUD 만들기 (useRef 로 컴포넌트 안의 변수 만들기)</div>
+            <hr />
+
+            <div className="discription">
+                - CRUD 구현
+            </div>
+
+            <CreateUser
+                username={username}
+                email={email}
+                onChange={onChange}
+                onCreate={onCreate}
+            />
+            <UserList users={users} onRemove={onRemove} onToggle={onToggle} />
+        </div>
+    );
+}
 
 function ArraySample(props) {
    
@@ -128,7 +180,9 @@ function ArraySample(props) {
             <LeftMenu />
            
             <div className="content_wrap">
-                <Part_11_1 />
+                <Chapter11 />
+
+                <Chapter12 />
             </div>
         </>
     );

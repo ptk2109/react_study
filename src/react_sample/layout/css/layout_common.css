@@ -97,7 +97,7 @@ html, body {
 
 .content_wrap .section{
 	margin-bottom: 20px;
-	border-top: dashed 1px #ccc;
+	border-top: dashed 1px rgb(80, 119, 247);
 	padding-top: 20px;
 }
 .content_wrap .section .sub_title{
