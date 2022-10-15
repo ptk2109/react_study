@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useMemo } from 'react';
 import LeftMenu from "../leftmenu/LeftMenu";
 
 import UserList from "./crud/UserList";
@@ -86,6 +86,12 @@ function Chapter11(){
 /** ↓↓↓↓↓↓↓↓↓↓↓↓ 배열항목 CRUD ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
 
 
+// function countActiveUsers(users) {
+//     console.log('활성 사용자 수를 세는중...');
+//     return users.filter(user => user.active).length;
+//  }
+
+
 function Chapter12(){
     const [inputs, setInputs] = useState({
         username: '',
@@ -93,11 +99,11 @@ function Chapter12(){
     });
     const { username, email } = inputs;
     const onChange = e => {
-    const { name, value } = e.target;
-    setInputs({
-        ...inputs,
-        [name]: value
-    });
+        const { name, value } = e.target;
+        setInputs({
+            ...inputs,
+            [name]: value
+        });
     };
     const [users, setUsers] = useState([
         {
@@ -122,6 +128,10 @@ function Chapter12(){
 
     const nextId = useRef(4);
 
+    const countActiveUsers = () =>{
+        console.log('활성 사용자 수를 세는중...');
+        return users.filter(user => user.active).length;
+    }
 
     const onCreate = () => {
         const user = {
@@ -151,8 +161,9 @@ function Chapter12(){
             user.id === id ? { ...user, active: !user.active } : user
           )
         );
-      };
+    };
       
+    const count = useMemo(() => countActiveUsers(users), [users]);
     return (
         <div className="section">
             <div className="sub_title">12. CRUD 만들기 (useRef 로 컴포넌트 안의 변수 만들기)</div>
@@ -169,6 +180,8 @@ function Chapter12(){
                 onCreate={onCreate}
             />
             <UserList users={users} onRemove={onRemove} onToggle={onToggle} />
+
+            <div>활성사용자 수 : {count}</div>
         </div>
     );
 }
