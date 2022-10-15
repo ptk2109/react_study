@@ -18,6 +18,7 @@ import H_SampleInputBox from '../nam24/html_component/SampleInputBox';
 import PropsSample from '../vlpt/05_props/PropsSample';
 import SampleInputBox from '../vlpt/08_input_state/SampleInputBox';
 import Counter from '../vlpt/07_counter/Counter';
+import ArraySample from '../vlpt/11_array/ArraySample';
 
 
 // import "./css/common_layout.css"
@@ -43,6 +44,7 @@ const SampleLayout = () => {
 						<Route path="/vlpt/PropsSample" element={<PropsSample />}></Route>
 						<Route path="/vlpt/SampleInputBox" element={<SampleInputBox />}></Route>
 						<Route path="/vlpt/Counter" element={<Counter />}></Route>
+						<Route path="/vlpt/ArraySample" element={<ArraySample />}></Route>
 
 						<Route path="*" element={<NotFound />}></Route>
 					</Routes>
