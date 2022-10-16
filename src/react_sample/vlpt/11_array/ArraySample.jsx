@@ -332,7 +332,7 @@ function ArraySample(props) {
             <div className="content_wrap">
                 <Chapter11 />
 
-                {/* <Chapter12 /> */}
+                <Chapter12 />
 
 
                 <Chapter12_UseReducer />
