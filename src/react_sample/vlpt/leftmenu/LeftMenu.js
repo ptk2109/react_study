@@ -12,6 +12,7 @@ function LeftMenu(props) {
                 <li><Link to="/vlpt/Counter">7,20. counter(useState, useReducer)</Link></li>
                 <li><Link to="/vlpt/SampleInputBox">8~10. input state</Link></li>
                 <li><Link to="/vlpt/ArraySample">11~20. CRUD 샘플 및 최적화</Link></li>
+                <li><Link to="/vlpt/TodoListApp">Todo List</Link></li>
             </ul>
             
         </div>
