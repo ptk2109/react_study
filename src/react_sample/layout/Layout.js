@@ -20,6 +20,7 @@ import SampleInputBox from '../vlpt/08_input_state/SampleInputBox';
 import Counter from '../vlpt/07_counter/Counter';
 import ArraySample from '../vlpt/11_array/ArraySample';
 import TodoListApp from '../vlpt/todo_list/App';
+import ApiSyncUser from '../vlpt/part4_api_sync/User';
 
 
 // import "./css/common_layout.css"
@@ -47,6 +48,7 @@ const SampleLayout = () => {
 						<Route path="/vlpt/Counter" element={<Counter />}></Route>
 						<Route path="/vlpt/ArraySample" element={<ArraySample />}></Route>
 						<Route path="/vlpt/TodoListApp" element={<TodoListApp />}></Route>
+						<Route path="/vlpt/ApiSyncUser" element={<ApiSyncUser />}></Route>
 
 						<Route path="*" element={<NotFound />}></Route>
 					</Routes>
