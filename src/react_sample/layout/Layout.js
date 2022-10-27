@@ -12,7 +12,7 @@ import TiktactoeMain from '../reactjs/tiktactoe/TiktactoeMain';
 import SampleButton from '../nam24/html_component/SampleButton';
 import SampleRadioButton from '../nam24/html_component/SampleRadioButton';
 import SampleCheckBox from '../nam24/html_component/SampleCheckBox';
-import H_SampleInputBox from '../nam24/html_component/SampleInputBox';
+import HSampleInputBox from '../nam24/html_component/SampleInputBox';
 
 /* 벨로퍼트 */
 import PropsSample from '../vlpt/05_props/PropsSample';
@@ -20,7 +20,7 @@ import SampleInputBox from '../vlpt/08_input_state/SampleInputBox';
 import Counter from '../vlpt/07_counter/Counter';
 import ArraySample from '../vlpt/11_array/ArraySample';
 import TodoListApp from '../vlpt/todo_list/App';
-import ApiSyncUser from '../vlpt/part4_api_sync/User';
+import ApiSyncUsers from '../vlpt/part4_api_sync/Users';
 
 
 // import "./css/common_layout.css"
@@ -40,7 +40,7 @@ const SampleLayout = () => {
 						<Route path="/nam24/html_component/SampleButton" element={<SampleButton />}></Route>
 						<Route path="/nam24/html_component/SampleRadioButton" element={<SampleRadioButton />}></Route>
 						<Route path="/nam24/html_component/SampleCheckBox" element={<SampleCheckBox />}></Route>
-						<Route path="/nam24/html_component/SampleInputBox" element={<H_SampleInputBox />}></Route>
+						<Route path="/nam24/html_component/SampleInputBox" element={<HSampleInputBox />}></Route>
 
 						{/* 벨로퍼트 */}
 						<Route path="/vlpt/PropsSample" element={<PropsSample />}></Route>
@@ -48,7 +48,7 @@ const SampleLayout = () => {
 						<Route path="/vlpt/Counter" element={<Counter />}></Route>
 						<Route path="/vlpt/ArraySample" element={<ArraySample />}></Route>
 						<Route path="/vlpt/TodoListApp" element={<TodoListApp />}></Route>
-						<Route path="/vlpt/ApiSyncUser" element={<ApiSyncUser />}></Route>
+						<Route path="/vlpt/ApiSyncUsers" element={<ApiSyncUsers />}></Route>
 
 						<Route path="*" element={<NotFound />}></Route>
 					</Routes>

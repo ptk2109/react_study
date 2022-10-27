@@ -13,7 +13,7 @@ function LeftMenu(props) {
                 <li><Link to="/vlpt/SampleInputBox">8~10. input state</Link></li>
                 <li><Link to="/vlpt/ArraySample">11~20. CRUD 샘플 및 최적화</Link></li>
                 <li><Link to="/vlpt/TodoListApp">Todo List</Link></li>
-                <li><Link to="/vlpt/ApiSyncUser">4장. API 연동</Link></li>
+                <li><Link to="/vlpt/ApiSyncUsers">4장. API 연동</Link></li>
             </ul>
             
         </div>
