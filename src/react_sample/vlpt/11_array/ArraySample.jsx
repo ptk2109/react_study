@@ -38,7 +38,7 @@ function Chapter11(){
     return (
         <div className="section">
             <div className="sub_title">11. 배열 렌더링하기</div>
-            참고 : <a href="https://react.vlpt.us/basic/11-render-array.html" target="_blank">https://react.vlpt.us/basic/11-render-array.html</a>
+            참고 : <a href="https://react.vlpt.us/basic/11-render-array.html" target="_blank" rel="noopener noreferrer">https://react.vlpt.us/basic/11-render-array.html</a>
             <hr />
 
             {/* <div className="sub_title">* 배열값을 출력하기</div> */}

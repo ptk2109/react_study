@@ -3,7 +3,7 @@ import LeftMenu from "../leftmenu/LeftMenu"
 
 
 /**************** 7. useState 를 통해 컴포넌트에서 바뀌는 값 관리하기 *********************/
-function Count_UseState(props){
+function CountUseState(props){
     const [num, setNum] = useState(0);
 
     function onCount(e){
@@ -48,14 +48,13 @@ function reducer1(state, action){
             }else{
                 return state -1
             }
-            break;
 
         default:
             return state;
     }
 }
 
-function Count_UseReducer(props){
+function CountUseReducer(props){
     const [number, dispatch1] = useReducer(reducer1, 0);
 
     const onIncrease = () => {
@@ -90,9 +89,9 @@ function CounterMain(props) {
         <LeftMenu />
     
         <div className="content_wrap">
-            <Count_UseState  />
+            <CountUseState  />
 
-            <Count_UseReducer  />
+            <CountUseReducer  />
         </div>
     </>
   )
