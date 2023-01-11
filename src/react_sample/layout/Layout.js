@@ -22,6 +22,8 @@ import ArraySample from '../vlpt/11_array/ArraySample';
 import TodoListApp from '../vlpt/todo_list/App';
 import ApiSyncUsers from '../vlpt/part4_api_sync/Users';
 
+/* 노마드코더 */
+import SuperConverter from '../nomadcoders/SuperConverter';
 
 // import "./css/common_layout.css"
 // import NotFound from './NotFound';
@@ -49,6 +51,9 @@ const SampleLayout = () => {
 						<Route path="/vlpt/ArraySample" element={<ArraySample />}></Route>
 						<Route path="/vlpt/TodoListApp" element={<TodoListApp />}></Route>
 						<Route path="/vlpt/ApiSyncUsers" element={<ApiSyncUsers />}></Route>
+
+						{/* 노마드코더 */}
+						<Route path="/nomadcoders/SuperConverter" element={<SuperConverter />}></Route>
 
 						<Route path="*" element={<NotFound />}></Route>
 					</Routes>

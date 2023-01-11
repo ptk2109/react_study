@@ -11,6 +11,7 @@ function SampleHeader(props) {
                 <span className="topmenu"><Link to="/reactjs/tiktactoe/TiktactoeMain">공식사이트 샘플</Link></span>
                 <span className="topmenu"><Link to="/nam24/html_component/SampleButton">HTML컴포넌트</Link></span>
                 <span className="topmenu"><Link to="/vlpt/PropsSample">벨리퍼트</Link></span>
+                <span className="topmenu"><Link to="/nomadcoders/SuperConverter">노마드코더</Link></span>
             </div>	
         </div>
 
