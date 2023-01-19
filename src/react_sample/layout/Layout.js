@@ -25,6 +25,7 @@ import ApiSyncUsers from '../vlpt/part4_api_sync/Users';
 /* 노마드코더 */
 import SuperConverter from '../nomadcoders/SuperConverter';
 import PropSample from '../nomadcoders/PropSample';
+import EffectSample from '../nomadcoders/EffectSample';
 
 // import "./css/common_layout.css"
 // import NotFound from './NotFound';
@@ -56,6 +57,7 @@ const SampleLayout = () => {
 						{/* 노마드코더 */}
 						<Route path="/nomadcoders/SuperConverter" element={<SuperConverter />}></Route>
 						<Route path="/nomadcoders/PropSample" element={<PropSample />}></Route>
+						<Route path="/nomadcoders/EffectSample" element={<EffectSample />}></Route>
 
 						<Route path="*" element={<NotFound />}></Route>
 					</Routes>

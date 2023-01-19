@@ -10,6 +10,7 @@ function LeftMenu(props) {
             <ul>
                 <li><Link to="/nomadcoders/SuperConverter">[state] Super Converter</Link></li>
                 <li><Link to="/nomadcoders/PropSample">[prop] sample</Link></li>
+                <li><Link to="/nomadcoders/EffectSample">[effect] sample</Link></li>
             </ul>
             
         </div>
