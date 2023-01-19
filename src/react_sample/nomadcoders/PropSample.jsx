@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LeftMenu from "./leftmenu/LeftMenu"
 import PropTypes from 'prop-types';
-
+ 
 
 function Btn({name, big=false}){
 	console.log(big);
@@ -107,7 +107,7 @@ function Base(props) {
 						1. PropTypes으로 prop 값 예외처리 하는 방법을 배운다. 
 					</div>
 
-					<Btn3 name={btnName} fontSize={18}/> 
+					<Btn3 name="Save Btn" fontSize={18}/> 
 					<Btn3 name={18} fontSize={"text"}/> 
 					<Btn3  fontSize={"text2"}/> 
 					
