@@ -26,6 +26,7 @@ import ApiSyncUsers from '../vlpt/part4_api_sync/Users';
 import SuperConverter from '../nomadcoders/SuperConverter';
 import PropSample from '../nomadcoders/PropSample';
 import EffectSample from '../nomadcoders/EffectSample';
+import TodoListSample from '../nomadcoders/TodoListSample';
 
 // import "./css/common_layout.css"
 // import NotFound from './NotFound';
@@ -58,6 +59,7 @@ const SampleLayout = () => {
 						<Route path="/nomadcoders/SuperConverter" element={<SuperConverter />}></Route>
 						<Route path="/nomadcoders/PropSample" element={<PropSample />}></Route>
 						<Route path="/nomadcoders/EffectSample" element={<EffectSample />}></Route>
+						<Route path="/nomadcoders/TodoListSample" element={<TodoListSample />}></Route>
 
 						<Route path="*" element={<NotFound />}></Route>
 					</Routes>
