@@ -27,6 +27,7 @@ import SuperConverter from '../nomadcoders/SuperConverter';
 import PropSample from '../nomadcoders/PropSample';
 import EffectSample from '../nomadcoders/EffectSample';
 import TodoListSample from '../nomadcoders/TodoListSample';
+import CoinTrackerSample from '../nomadcoders/CoinTrackerSample';
 
 // import "./css/common_layout.css"
 // import NotFound from './NotFound';
@@ -60,6 +61,7 @@ const SampleLayout = () => {
 						<Route path="/nomadcoders/PropSample" element={<PropSample />}></Route>
 						<Route path="/nomadcoders/EffectSample" element={<EffectSample />}></Route>
 						<Route path="/nomadcoders/TodoListSample" element={<TodoListSample />}></Route>
+						<Route path="/nomadcoders/CoinTrackerSample" element={<CoinTrackerSample />}></Route>
 
 						<Route path="*" element={<NotFound />}></Route>
 					</Routes>
