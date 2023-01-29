@@ -27,6 +27,7 @@ function ToDoList(){
 				<div className="sub_title">todo 리스트 만들기</div>
 				<div className="discription">
 					<b>[학습목표]</b>
+					- state를 이용하여 간단한 투두리스트를 만들어보자
 				</div>
 				<form onSubmit={onSubmit}>
 					<h1>todo list ({toDos.length})</h1>
